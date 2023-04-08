@@ -4,7 +4,7 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 title: Jinghan Yang # Website name
-baseURL: 'https://example.com/' # Website URL
+baseURL: 'https://jinghanyang.com/' # Website URL
 
 ############################
 ## LANGUAGE
@@ -21,10 +21,10 @@ removePathAccents: true
 
 module:
   imports:
-    - path: github.com/ecielyang/wowchemy-hugo-themes/modules/wowchemy-plugin-netlify-cms
-    - path: github.com/ecielyang/wowchemy-hugo-themes/modules/wowchemy-plugin-netlify
-    - path: github.com/ecielyang/wowchemy-hugo-themes/modules/wowchemy-plugin-reveal
-    - path: github.com/ecielyang/wowchemy-hugo-themes/modules/wowchemy/v5
+    - path: github:com/ecielyang/jinghanyang/tree/main/modules/wowchemy-plugin-netlify-cms
+    - path: github:com/ecielyang/jinghanyang/tree/main/modules/wowchemy-plugin-netlify
+    - path: github:com/ecielyang/jinghanyang/tree/main/modules/wowchemy-plugin-reveal
+    - path: github:com/ecielyang/jinghanyang/tree/main/modules/v5
 
 ############################
 ## ADVANCED
