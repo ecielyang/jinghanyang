@@ -33,7 +33,7 @@ authors:
   - 吳恩達
 
 tags:
-  - Academic
+  - Jinghan Yang
   - 开源
 
 categories:
