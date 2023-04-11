@@ -14,32 +14,32 @@ sections:
       text:
 ---
 
-  - block: collection
+[//]: # (  - block: collection)
 
-    content:
+[//]: # (    content:)
 
-      title: Publications
+[//]: # (      title: Recent Publications)
 
-      text: |-
+[//]: # (      text: |-)
 
-        {{% callout note %}}
+[//]: # (        {{% callout note %}})
 
-        Quickly discover relevant content by [filtering publications](./publication/).
+[//]: # (        Quickly discover relevant content by [filtering publications]&#40;./publication/&#41;.)
 
-        {{% /callout %}}
+[//]: # (        {{% /callout %}})
 
-      filters:
+[//]: # (      filters:)
 
-        folders:
+[//]: # (        folders:)
 
-          - publication
+[//]: # (          - publication)
 
-        exclude_featured: true
+[//]: # (        exclude_featured: true)
 
-    design:
+[//]: # (    design:)
 
-      columns: '2'
+[//]: # (      columns: '2')
 
-      view: citation
+[//]: # (      view: citation)
 
----
+[//]: # (---)
