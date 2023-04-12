@@ -11,7 +11,7 @@ projects: []
 # Date published
 date: '2020-12-13T00:00:00Z'
 
-# Date updated
+# Date updatedÏ
 lastmod: '2020-12-13T00:00:00Z'
 
 # Is this an unpublished draft?
@@ -33,7 +33,7 @@ authors:
   - 吳恩達
 
 tags:
-  - Academic
+  - Jinghan Yang
   - 开源
 
 categories:
