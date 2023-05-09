@@ -75,7 +75,11 @@ email: ''
 highlight_name: true
 ---
 Hello! My name is Jinghan Yang. I am currently a final-year undergraduate student at [the University of Hong Kong (HKU)](https://www.hku.hk), under the mentorship of [Zhonghua Liu](https://sites.google.com/view/drliu/home). 
-My academic interests lie in interpretable machine learning and large language models. 
+My academic interests lie in interpretable machine learning and combining logic to large language models. 
 My research journey took off under the guidance of [Byron Wallace](https://www.byronwallace.com) during my exchange at [Northeastern University (NEU)](https://www.northeastern.edu).
 I am taking a gap year at [Microsoft Research Lab](https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/) advised by [Shuming Ma](https://www.microsoft.com/en-us/research/people/shumma/).
 {style="text-align: justify;"}
+
+I am going to apply for a PhD in 2024 fall. Please email me if you are interested!
+
+
