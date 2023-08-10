@@ -1,48 +1,55 @@
-var gulp = require('gulp');
-var browserSync = require('browser-sync').create();
-var pkg = require('./package.json');
+const { src, dest, series, parallel, watch } = require('gulp');
+const browserSync = require('browser-sync').create();
+const pkg = require('./package.json');
 
 // Copy third party libraries from /node_modules into /vendor
-gulp.task('vendor', function() {
-
+function vendor() {
   // Bootstrap
-  gulp.src([
+  src([
       './node_modules/bootstrap/dist/**/*',
       '!./node_modules/bootstrap/dist/css/bootstrap-grid*',
       '!./node_modules/bootstrap/dist/css/bootstrap-reboot*'
     ])
-    .pipe(gulp.dest('./vendor/bootstrap'))
+    .pipe(dest('./vendor/bootstrap'))
 
   // jQuery
-  gulp.src([
+  src([
       './node_modules/jquery/dist/*',
       '!./node_modules/jquery/dist/core.js'
     ])
-    .pipe(gulp.dest('./vendor/jquery'))
+    .pipe(dest('./vendor/jquery'))
 
   // jQuery Easing
-  gulp.src([
+  src([
       'node_modules/jquery.easing/*.js'
     ])
-    .pipe(gulp.dest('vendor/jquery-easing'))
-
-})
-
-// Default task
-gulp.task('default', ['vendor']);
+    .pipe(dest('vendor/jquery-easing'));
+}
 
 // Configure the browserSync task
-gulp.task('browserSync', function() {
+function browserSyncTask() {
   browserSync.init({
     server: {
       baseDir: "./"
     }
   });
-});
+}
+
+// Watch task
+function watchTask() {
+  watch('./css/*.css', browserSync.reload);
+  watch('./js/*.js', browserSync.reload);
+  watch('./*.html', browserSync.reload);
+}
+
+// Default task
+const defaultTask = series(vendor);
 
 // Dev task
-gulp.task('dev', ['browserSync'], function() {
-  gulp.watch('./css/*.css', browserSync.reload);
-  gulp.watch('./js/*.js', browserSync.reload);
-  gulp.watch('./*.html', browserSync.reload);
-});
+const dev = series(browserSyncTask, watchTask);
+
+exports.vendor = vendor;
+exports.browserSync = browserSyncTask;
+exports.watch = watchTask;
+exports.default = defaultTask;
+exports.dev = dev;
