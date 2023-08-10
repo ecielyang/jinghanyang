@@ -3,7 +3,7 @@ const browserSync = require('browser-sync').create();
 const pkg = require('./package.json');
 
 // Copy third party libraries from /node_modules into /vendor
-function vendor() {
+function vendor(done) {
   // Bootstrap
   src([
       './node_modules/bootstrap/dist/**/*',
@@ -24,16 +24,10 @@ function vendor() {
       'node_modules/jquery.easing/*.js'
     ])
     .pipe(dest('vendor/jquery-easing'));
+
+  done();
 }
 
-// Configure the browserSync task
-function browserSyncTask() {
-  browserSync.init({
-    server: {
-      baseDir: "./"
-    }
-  });
-}
 
 // Watch task
 function watchTask() {
