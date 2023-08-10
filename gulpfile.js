@@ -28,7 +28,6 @@ function vendor(done) {
   done();
 }
 
-
 // Watch task
 function watchTask() {
   watch('./css/*.css', browserSync.reload);
@@ -39,11 +38,11 @@ function watchTask() {
 // Default task
 const defaultTask = series(vendor);
 
-// Dev task
-const dev = series(browserSyncTask, watchTask);
+// Dev task - Commented out the browserSyncTask reference
+// const dev = series(browserSyncTask, watchTask);
 
 exports.vendor = vendor;
-exports.browserSync = browserSyncTask;
+// exports.browserSync = browserSyncTask;  // Comment this out
 exports.watch = watchTask;
 exports.default = defaultTask;
-exports.dev = dev;
+// exports.dev = dev;  // Comment this out
